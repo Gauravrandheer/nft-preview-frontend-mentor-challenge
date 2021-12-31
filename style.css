@@ -1,0 +1,151 @@
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.attribution { 
+    font-size: 11px;
+     text-align: center;
+     margin: 20px;
+     color: hsl(0, 0%, 100%);
+     min-width: 330px;
+    }
+
+     
+
+.attribution a {
+     color: hsl(178, 100%, 50%);
+    }
+
+img{
+    max-width: 100%;
+}
+:root{
+    --softblue:hsl(215, 51%, 70%);
+    --cyan:hsl(178, 100%, 50%);
+    --mainbg:hsl(217, 54%, 11%);
+    --cardbg:hsl(216, 50%, 16%);
+    --line:hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+body{
+    font-size: 18px;
+    background: var(--mainbg);
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--cardbg);
+  width: 400px;
+  margin: 2rem auto;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+}
+
+.container .image-container {
+    width: 100%;
+    border: 10px;
+    position: relative;
+}
+
+.container .image-container .image-hover{
+    position: absolute;
+    top: 0;
+    background-color:hsl(178, 100%, 50% ,60%) ;
+     opacity: 0;
+     width: 100%;
+     height: calc(100% - 4px);
+     transition: opacity 0.3s;
+     z-index: 999;
+}
+.container .image-container .image-hover img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container .image-container .image-hover:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.container .content-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.container h1{
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 1.1rem 0;
+    width: 80%;
+}
+
+.container h1:hover{
+    color: var(--cyan);
+    cursor: pointer;
+  
+}
+
+.container p{
+    color: var(--softblue);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.container ul{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    padding: 1.3rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.container li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: var(--softblue);
+}
+.container li:first-child{
+    color:cyan
+}
+
+.container li img{
+  padding: 0 4px;
+}
+
+
+.container .end-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+ 
+    width: 100%;
+}
+
+.container .end-container img{
+   width: 3rem;
+   margin-right: 1rem;
+   border: 2px solid var(--white);
+   border-radius: 50%;
+}
+
+.container .end-container span{
+    color: var(--white);
+}
+
+.container .end-container span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
